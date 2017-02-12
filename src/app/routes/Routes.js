@@ -14,10 +14,8 @@ import {
 const Routes = () => {
   return (
     <Route path="/" component={App}>
-      <IndexRoute component={Home} />
-      <Route path="/components" component={Components} />
-      <Route path="/about" component={About} />
-      <Route path="/opendata" component={Opendata} />
+      <IndexRoute component={Opendata} />
+      <Route path="/aliments" component={Opendata} />
     </Route>
   );
 };

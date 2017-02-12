@@ -1,22 +1,10 @@
 {
-  "brand"       : "React Bootstrap Starter",
+  "brand"       : "Opendata",
   "leftLinks"   : [],
   "rightLinks"  : [
     {
-      "label" : "Home",
-      "link"  : "/"
-    },
-    {
-      "label" : "Components",
-      "link"  : "/components"
-    },
-    {
-      "label" : "About",
-      "link"  : "/about"
-    },
-    {
-      "label" : "Opendata",
-      "link"  : "/opendata"
+      "label" : "Aliments",
+      "link"  : "/aliments"
     }
   ]
 }

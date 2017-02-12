@@ -37,12 +37,19 @@ export default class Opendata extends Component {
         };
     }
 
-    getAliment(alimentSelected) {
-        fetchAlimentById(alimentSelected[0]._id).then(data => {
+    getAliment() {
+        fetchAlimentById(this.state.alimentSelected[0]._id).then(data => {
             this.setState({
                 aliment: data
             })
         });
+    }
+
+    setAliment(alimentSelected) {
+      this.setState({
+        alimentSelected
+      })
+
     }
 
     calculate(evt) {
@@ -58,9 +65,12 @@ export default class Opendata extends Component {
         return (<Jumbotron>
           <div className="row">
               <div className="col-md-6 col-xs-12">
-                    <Typeahead options = { this.state.alimentNames } labelKey = { "ORIGFDNM" } onChange = {this.getAliment.bind(this)}  placeholder = "Nom d'aliments"/>
+                    <Typeahead options = { this.state.alimentNames } labelKey = { "ORIGFDNM" } onChange={this.setAliment.bind(this)} placeholder = "Nom d'aliments"/>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-3">
+                <button type="button" className="btn btn-primary" onClick={this.getAliment.bind(this)}>Envoi</button>
+            </div>
+              <div className="col-md-3">
                 {this.state.aliment && <button type="button" className="btn btn-primary" onClick={this.calculate.bind(this)}>Calcul Calories</button>}
             </div>
           </div>
