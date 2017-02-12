@@ -1,6 +1,6 @@
 import * as fetchTools  from './fetchTools';
 import {getSomething}   from './API/example';
-import {fetchAliments, fetchAlimentsNames, fetchAlimentById} from './API/aliments';
+import {fetchAliments, fetchAlimentsNames, fetchAlimentById, calculateCalorie} from './API/aliments';
 
 export {
   fetchTools,
